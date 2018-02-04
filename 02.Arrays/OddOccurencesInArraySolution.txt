@@ -1,0 +1,25 @@
+
+using System;
+
+// you can write to stdout for debugging purposes, e.g.
+// Console.WriteLine("this is a debug message");
+
+class Solution {
+    public int solution(int[] A) {
+        Array.Sort(A);
+        
+        if(A.Length == 1) return A[0];
+        
+        for( int i = 0; i < A.Length; ++i)
+        {
+            if( i == A.Length -1) return A[A.Length-1];
+            // check only even i's
+            if( i % 2 == 0){
+                if( A[i] != A[i+1])
+                    return A[i];
+            }
+        }
+        return A.Length;
+    }
+}
+
