@@ -1,3 +1,5 @@
+
+
 using System;
 
 class Solution
@@ -11,9 +13,7 @@ class Solution
         while (N > 0)
         {
             int reminder = N % 2;
-            Console.WriteLine("Reminder: " + reminder);
             N = N / 2;
-            Console.WriteLine(N);
 
             if (reminder != 0)
             {
@@ -32,7 +32,8 @@ class Solution
                 }
             }
         }
-        Console.WriteLine("Result: " + result);
+
         return maxResult;
     }
 }
+
